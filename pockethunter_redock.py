@@ -2,7 +2,7 @@
 import subprocess
 import os
 
-pdb_ids = ["4A4L","2YAC","4J52","3FC2","2rku_A_prod_R3_fit_4180","2rku_A_prod_R3_fit_1752","2rku_A_prod_R3_fit_3147"]
+pdb_ids = ["4A4L","2YAC","4J52","3FC2","2rku_A_prod_R3_fit_4180","2rku_A_prod_R3_fit_1752","2rku_A_prod_R3_fit_3147","2RKU"]
 current_directory = os.getcwd()
 ligands_pdbqt_dir = f"{current_directory}/ligands_pdbqt"    
 
@@ -14,7 +14,7 @@ for pdb in pdb_ids:
         print(pdb, ligf)
 
         #docking directory
-        docking_dir = f"{current_directory}/docking2/{pdb}/{ligf}"
+        docking_dir = f"{current_directory}/docking4/{pdb}/{ligf}"
         
         # before running the smina docking command, check if out file already exists
         out_file = f"{docking_dir}/{pdb}_{ligf}_out.pdbqt"
